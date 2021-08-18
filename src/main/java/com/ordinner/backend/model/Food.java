@@ -6,5 +6,5 @@ public class Food {
     private int FoodId;
     private String name;
     private static Map<Ingredient,Integer> ingredientUsed;
-    private String status;
+    private FoodStatus status;
 }
