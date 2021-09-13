@@ -10,15 +10,12 @@ public class Food {
     private Integer id;
     @Column(name = "name")
     private String name;
-    @Column(name = "ingredient_Used")
+    @Column(name = "ingredient_used")
     private static Map<Ingredient,Integer> ingredientUsed;
-    @Column(name = "status")
-    private FoodStatus status;
 
-    public Food(Integer foodId, String name, FoodStatus status) {
+    public Food(Integer foodId, String name) {
         id = foodId;
         this.name = name;
-        this.status = status;
     }
 
     public Integer getId() {
@@ -45,11 +42,4 @@ public class Food {
         Food.ingredientUsed = ingredientUsed;
     }
 
-    public FoodStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(FoodStatus status) {
-        this.status = status;
-    }
 }
